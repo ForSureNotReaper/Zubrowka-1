@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApp1.styczen2024"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="styczen2024" Height="450" Width="800">
+    <Grid Background="LightSteelBlue">
+        <StackPanel Margin="0,0,400,85">
+            <GroupBox Height="349" Header="Dane Pracownika">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="390" Height="57">
+                        <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Top"><Run Language="pl-pl" Text="Imię"/></TextBlock>
+                        <TextBox TextWrapping="Wrap" Width="176" Height="22" VerticalAlignment="Top" Margin="10,0,0,0" Name="imie"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="390" Height="55">
+                        <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Top"><Run Language="pl-pl" Text="Nazwisko" Name="nazwisko"/></TextBlock>
+                        <TextBox TextWrapping="Wrap" Width="149" Height="22" VerticalAlignment="Top" Margin="10,0,0,0"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="390" Height="65">
+                        <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Top"><Run Language="pl-pl" Text="Stanowisko" /></TextBlock>
+                        <ComboBox Width="139" Height="25" VerticalAlignment="Top" Margin="10,0,0,0">
+                            <ComboBoxItem x:Name="kierownik" Content="Kierownik"/>
+                            <ComboBoxItem x:Name="sp" Content="Starszy programista"/>
+                            <ComboBoxItem x:Name="mp" Content="Młodszy programista"/>
+                            <ComboBoxItem x:Name="test" Content="Tester"/>
+                        </ComboBox>
+
+
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+
+        </StackPanel>
+        <StackPanel Margin="405,0,0,85">
+            <GroupBox Height="349" Header="Generowanie Hasła">
+                <StackPanel>
+                    <StackPanel Height="42" Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap"><Run Language="pl-pl" Text="Ile znaków?"/></TextBlock>
+                        <TextBox x:Name="ile" Width="113" Margin="5,0,0,0"></TextBox>
+                    </StackPanel>
+                    <StackPanel Height="42" Orientation="Horizontal">
+                        <RadioButton></RadioButton>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+
+    </Grid>
+</Window>
